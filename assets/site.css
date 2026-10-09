@@ -1,0 +1,89 @@
+:root {
+  --ink: #1f2a37;
+  --muted: #5b6675;
+  --sea: #0f6e6e;
+  --sea-dark: #0a5151;
+  --coral: #e8664d;
+  --sand: #f6f1ea;
+  --line: #e4ddd2;
+}
+
+body {
+  font-family: "Outfit", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: var(--ink);
+  background: #fff;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+h1, h2, h3, .navbar-brand {
+  font-family: "Fraunces", Georgia, serif;
+  letter-spacing: -0.01em;
+}
+
+a { color: var(--sea); }
+a:hover { color: var(--sea-dark); }
+
+.navbar { border-bottom: 1px solid var(--line); }
+.navbar-brand { font-weight: 600; color: var(--ink); }
+.navbar-brand span { color: var(--coral); }
+
+.band-sand { background: var(--sand); }
+
+.hero h1 { font-size: clamp(1.9rem, 4.5vw, 3rem); line-height: 1.15; }
+.hero .lead { color: var(--muted); }
+
+.photo {
+  background: var(--line);
+  border-radius: 1rem;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+}
+.photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.photo-wide { aspect-ratio: 16 / 10; }
+
+.btn-coral {
+  --bs-btn-bg: var(--coral);
+  --bs-btn-border-color: var(--coral);
+  --bs-btn-color: #fff;
+  --bs-btn-hover-bg: #d4533b;
+  --bs-btn-hover-border-color: #d4533b;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-active-bg: #c04a33;
+  --bs-btn-active-border-color: #c04a33;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: .7rem 1.6rem;
+}
+
+.toc { border-left: 3px solid var(--coral); padding-left: 1rem; }
+.toc a { text-decoration: none; }
+
+.quartier {
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  height: 100%;
+}
+.quartier .badge { background: var(--sea); font-weight: 500; }
+
+.note {
+  background: var(--sand);
+  border-radius: .75rem;
+  padding: 1rem 1.25rem;
+  font-size: .95rem;
+}
+
+.accordion-button:not(.collapsed) { background: var(--sand); color: var(--ink); }
+
+footer { border-top: 1px solid var(--line); font-size: .9rem; color: var(--muted); }
+footer a { color: var(--muted); }
+
+.cta-mobile {
+  position: fixed; left: 0; right: 0; bottom: 0;
+  padding: .6rem 1rem;
+  background: rgba(255,255,255,.96);
+  border-top: 1px solid var(--line);
+  z-index: 1030;
+}
+@media (min-width: 768px) { .cta-mobile { display: none; } }
+@media (max-width: 767.98px) { body { padding-bottom: 4.5rem; } }
